@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=button>, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>CRONÔMETRO</title>
+</head>
+
+<body>
+    <video id="bgVideo" loop muted autoplay>
+        <source src="./ampulheta.mp4" type="video/mp4">
+    </video>
+
+    <h2>CRONÔMETRO</h2>
+    <h1 id="timer">00:00.00</h1>
+    <div class="botoes">
+        <button onclick="stop()">Stop</button>
+        <button onclick="start()">Start</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+</body>
+
+
+<script>
+    let segundos = 0;
+    let intervalo = null;
+    const timerElement = document.getElementById("timer");
+
+    function start() {
+        if (!intervalo) {
+            intervalo = setInterval(() => {
+                segundos++;
+                atualizarTela();
+            }, 1000
+            );
+        }
+    }
+    function stop() {
+        if (intervalo) {
+            clearInterval(intervalo);
+            intervalo = null;
+        }
+    }
+
+    function formatarTempo(segundosTotais) {
+        const horas = Math.floor(segundosTotais / 3600);
+        const minutos = Math.floor((segundosTotais % 3600) / 60);
+        const segundos = segundosTotais % 60;
+
+        return `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+    }
+
+    function atualizarTela() {
+        timerElement.textContent = formatarTempo(segundos);
+    }
+    function reset() {
+        stop();
+        segundos = 0;
+        atualizarTela();
+    }
+
+</script>
+
+</html>
