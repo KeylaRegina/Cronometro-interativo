@@ -46,7 +46,7 @@ Esse incremento demonstra minha capacidade de:
 
 ## 🔗 Acesse o projeto
 
-👉 [Clique aqui para ver o projeto funcionando](SEU-LINK-AQUI)
+👉 [Clique aqui para ver o projeto funcionando](https://keylaregina.github.io/Cronometro-interativo/)
 
 ---
 
