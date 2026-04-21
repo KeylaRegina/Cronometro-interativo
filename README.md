@@ -89,4 +89,3 @@ Este projeto faz parte da minha jornada de aprendizado 💙
 
 
 
-<img width="1302" height="711" alt="image" src="https://github.com/user-attachments/assets/ce56bd4a-ba9f-4c51-80a8-e488be295deb" />
